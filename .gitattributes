@@ -1,0 +1,2 @@
+clear.mov filter=lfs diff=lfs merge=lfs -text
+mist_fog.mov filter=lfs diff=lfs merge=lfs -text

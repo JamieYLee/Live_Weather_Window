@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#vid_overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  background-color: rgba(255,255,255,0.3);
+  z-index: -1;
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -2;
+  overflow-y: hidden;
+}
+
+/* start of CFswitch */
+.CFswitch {
+    position: relative; width: 64px;
+    height: 34px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.CFswitch-checkbox {
+    display: none;
+}
+.CFswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #CFCFCF; border-radius: 28px;
+}
+.CFswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.CFswitch-inner:before, .CFswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 16px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.CFswitch-inner:before {
+    content: "°C";
+    padding-left: 12px;
+    background-color: #34A7C1; color: #FFFFFF;
+}
+.CFswitch-inner:after {
+    content: "°F";
+    padding-right: 12px;
+    background-color: #F0F0F0; color: #34A7C1;
+    text-align: right;
+}
+.CFswitch-switch {
+    display: block; width: 18px; margin: 6px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 30px;
+    border: 2px solid #CFCFCF; border-radius: 28px;
+    transition: all 0.3s ease-in 0s;
+}
+.CFswitch-checkbox:checked + .CFswitch-label .CFswitch-inner {
+    margin-left: 0;
+}
+.CFswitch-checkbox:checked + .CFswitch-label .CFswitch-switch {
+    right: 0px;
+}
+/* end of CFswitch */

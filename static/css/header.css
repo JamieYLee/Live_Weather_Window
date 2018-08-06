@@ -1,0 +1,28 @@
+nav {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar {
+  background-color: #f8f9fa;
+  border-radius: 0px;
+  z-index: 20;
+}
+
+.bookmark {
+  height: 45px;
+  width: 45px;
+  margin-top: 2px;
+  margin-right: 2px;
+  background: url("../media/img/bookmark_on.png") no-repeat;
+  display: inline-block;
+  background-size: contain;
+  transition: 0.3s ease;
+  filter: saturate(0%);
+}
+
+.bookmark:hover {
+  filter: saturate(100%);
+  display: inline-block;
+  background-size: contain;
+  transition: all ease-in-out .3s;
+}

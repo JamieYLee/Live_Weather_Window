@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LW2 - Live Weather Window</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./static/css/main.css">
+  </head>
+  <body>
+    <header id="nav"></header>
+
+
+    <div class="container">
+      <div class="row">
+        <div id="vid_overlay"></div>
+        <video autoplay loop>
+          <source src="./static/media/footages/main_cloud.mov" type="video/mp4">
+          <source src="./static/media/footages/main_cloud.webm" type="video/webm">
+        </video>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 container_list">
+          <h1>
+            <ul class="container_list_ul">
+              <li class="container_list_item">LIVE WEATHER WINDOW</li>
+              <li class="container_list_item">WEATHER MATTERS.</li>
+              <li class="container_list_item">LIVING MATTERS.</li>
+              <li class="container_list_item">LIVE WEATHER WINDOW</li>
+            </ul>
+          </h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 introduction">
+          <h4>Check the weather outside not with your real window but this live-web-window.</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-10 col-md-offset-2">
+          <form action="./result.html" method="get" id="search_form">
+            <!--select the country-->
+            <select class="select countries" id="countries" name="countries">
+              <option value="" disabled selected>Country...?</option>
+            </select>
+            <!--select the state-->
+            <select class="select states" id="states" name="states">
+              <option value="" disabled selected>State...?</option>
+            </select>
+            <!--select the city-->
+            <select class="select cities" id="cities" name="cities">
+              <option value="" disabled selected>City...?</option>
+            </select>
+            <input type="submit" name="" value="" class="submit_btn btn btn-primary">
+          </form>
+        </div><!--end of select col-md-->
+      </div><!--end of select row-->
+
+      <div class="row">
+        <div class="col-md-4 col-md-offset-5 nearests">
+          <a href="#" onclick="showNearest()">Find your nearest city</a>
+          <button onclick="Reset()" class="reset_btn btn btn-primary">
+            <img src="./static/media/img/reset.png" alt="reset">
+          </button>
+        </div><!--end of nearest col-md-->
+      </div><!--end of nearest row-->
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./static/js/app.js"></script>
+  </body>
+</html>
