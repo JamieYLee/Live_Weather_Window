@@ -3,7 +3,34 @@
   <a class="navbar-brand" href="#">
     <img src="../static/media/img/lw2_logo_3.png" height="40px" style="margin-top: -10px;" alt="logo">
   </a>
-  <button type="button" name="" class="btn pull-right bookmark">
+  <!--button for opening bookmark modal-->
+  <button type="button" name="" class="btn pull-right bookmark" data-toggle="modal" data-target="#bookmarklet">
   </button>
-  <link rel="stylesheet" href="../static/css/header.css">
 </nav>
+<!--bookmark modal-->
+<div class="modal right fade" id="bookmarklet" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"> 	&els;</span></button>
+        <h4 class="modal-title" id="myModalLabel2">Bookmarks</h4>
+      </div>
+
+      <div class="modal-body">
+        <div class="row"> <!-- list row-->
+          <div class="list-box">
+            <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <a href="#" class="move_to_list">
+              <h1>City</h1>
+              <h3>State, Country</h3>
+            </a>
+          </div>
+        </div> <!--end of each list row-->
+      </div>
+
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- end of modal -->
+<link rel="stylesheet" href="../static/css/header.css">
+<script type="text/javascript" src="./static/js/bookmark.js"></script>

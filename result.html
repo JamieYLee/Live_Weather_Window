@@ -22,61 +22,76 @@
         </video>
       </div>
 
-      <div class="row">
+      <div class="row extra-margin">
         <div class="col-md-12">
-          <p id="country"></p>
-        </div>
-      </div>
+          <div class="row">
+            <div class="col-md-3">
+              <img src="./static/media/img/clear.png" alt="default is clear" id="weahter_img" class="img-responsive img-center">
+            </div><!-- end of img col-md-3-->
+            <div class="col-md-5">
+              <div class="row">
+                <p id="city"></p>
+              </div>
+              <div class="row">
+                <p id="state"></p>
+              </div>
+              <div class="row">
+                <p id="country"></p>
+              </div>
+            </div><!-- end of loc info col-md-5-->
+            <div class="col-md-4">
+              <button type="button" name="" class="btn pull-right mark_check" id="mark_check" onclick="setCookie()">
+              </button>
+            </div>
+          </div><!-- end of the row -->
+        </div><!-- end of the col-md-12 -->
+      </div><!-- end of the row -->
 
-      <div class="row">
-        <div class="col-md-12">
-          <p id="state"></p>
+      <div class="row xmargin">
+        <!-- showing weather like clouds, clear etc from owm api -->
+        <div class="col-md-6">
+          <div class="wrapper">
+            <h5 class="wrap_title">Forecast</h5>
+            <p id="forecast" class="wrap_content">-</p>
+            <p id="forecast_alert" class="alerts">-</p>
+          </div>
         </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12">
-          <p id="city"></p>
-        </div>
-      </div>
-
-      <!-- showing temperature from owm api -->
-      <div class="row">
-        <div class="col-md-12">
-          <p id="high"></p>
-          <!--on/off toggle switch to change celcius/farenheit, gonna do it soon -->
-          <div class="CFswitch">
-            <input type="checkbox" name="CFswitch" class="CFswitch-checkbox" id="myCFswitch" checked>
-            <label class="CFswitch-label" for="myCFswitch">
+        <!-- showing temperature from owm api -->
+        <div class="col-md-6">
+          <div class="wrapper">
+            <h5 class="wrap_title">Temperature</h5>
+            <p id="high" class="wrap_content">-</p>
+            <!--on/off toggle switch to change celcius/farenheit -->
+            <div class="CFswitch pull-right">
+              <input type="checkbox" name="CFswitch" class="CFswitch-checkbox" id="myCFswitch" checked>
+              <label class="CFswitch-label" for="myCFswitch">
                 <span class="CFswitch-inner"></span>
                 <span class="CFswitch-switch"></span>
-            </label>
-          </div><!--end of switch-->
+              </label>
+            </div><!--end of switch-->
+          </div>
         </div><!--end of temp col-->
       </div>
 
-      <!-- showing humidity from owm api -->
-      <div class="row">
-        <div class="col-md-12">
-          <p id="humidity"></p>
+      <div class="row xmargin">
+        <!-- showing humidity from owm api -->
+        <div class="col-md-6">
+          <div class="wrapper">
+            <h5 class="wrap_title">Humidity</h5>
+            <p id="humidity" class="wrap_content">-</p>
+            <p id="humidity_alert" class="alerts">Better prepare your umbrealla in case of raining situation!</p>
+          </div>
+        </div>
+        <!-- showing air quality from airvisual api -->
+        <div class="col-md-6">
+          <div class="wrapper">
+            <h5 class="wrap_title">Air Quality</h5>
+            <p id="aqius" class="wrap_content">-</p>
+            <p id="aq_alert" class="alerts">Be aware of putting mask on your face while being outside!</p>
+            <img src="./static/media/img/warning.png" alt="Bad Air Quality Alert" class="pull-right" id="warn_img">
+          </div>
         </div>
       </div>
-
-      <!-- showing weather like clouds, clear etc from owm api -->
-      <div class="row">
-        <div class="col-md-12">
-          <p id="forecast"></p>
-        </div>
-      </div>
-
-      <!-- showing air quality from airvisual api -->
-      <div class="row">
-        <div class="col-md-12">
-          <p id="aqius"></p>
-        </div>
-      </div>
-    </div>
-
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
