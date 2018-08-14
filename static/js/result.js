@@ -104,8 +104,24 @@ function changeText(){
   var humidity_index = $("#humidity").text();
   var weather_text = $("#forecast_alert");
 
-  if(humidity_index >= 40){
-    $("#forecast_alert").css("display", "block");
+  if($("#forecast").text() === "Thunderstorm"){
+    weather_text.html("Lightning rods will make you safe but anyway becareful while outside!");
+  }else if($("#forecast").text() === "Clouds"){
+    weather_text.html("Worried about snow or rain? But still outdoor activity available!");
+  }else if($("#forecast").text() === "Rain"){
+    weather_text.html("Close your eyes and raining sounds will make you calm.");
+  }else if($("#forecast").text() === "Clear"){
+    weather_text.html("So pleasant! Enjoy lots of outdoor activities, and dont' forget the sunscreen!");
+  }else if($("#forecast").text() === "Snow"){
+    weather_text.html("Watching snowfalls through window + Hot Chocolate = Perfect");
+  }else if($("#forecast").text() === "Fog" || $("#forecast").text() === "Haze"|| $("#forecast").text() === "Mist"){
+    weather_text.html("Really be careful when you are driving.");
+  }else if($("#forecast").text() === "Dust"){
+    weather_text.html("Uh-oh.... Do not go outside as much as possible for your health.");
+  }
+
+  if(parseInt(humidity_index) >= 40){
+    $("#humidity_alert").css("display", "block");
   }
 
   if($("#aqius").text() >= 100){

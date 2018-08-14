@@ -104,13 +104,13 @@ video {
 }
 
 .wrap_content {
-  font-size: 5rem;
+  font-size: 5.6rem;
   font-weight: bold;
   margin-left: 12px;
 }
 
 .alerts {
-  margin-top: 25px;
+  margin-top: 19px;
 }
 
 #humidity_alert {
@@ -133,7 +133,6 @@ video {
     position: relative; width: 64px;
     height: 34px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-    margin-top: 10px;
 }
 .CFswitch-checkbox {
     display: none;
