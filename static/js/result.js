@@ -1,5 +1,5 @@
 // calling header.html
-$.get('../../components/header.html', function(response) {
+$.get('./components/header.html', function(response) {
   $("#nav").html(response);
 });
 
